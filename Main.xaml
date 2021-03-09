@@ -143,12 +143,19 @@
                 </ui:Target>
               </ui:CloseApplication.Target>
             </ui:CloseApplication>
-            <If Condition="[CurrentTimeInLondon &lt; &quot;6:00 AM&quot;]" sap:VirtualizedContainerService.HintSize="713,217" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[CurrentTimeInLondon &lt; &quot;5:00 AM&quot;]" sap:VirtualizedContainerService.HintSize="713,217" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;It is still night time in London&quot;]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The current time in London is &quot; + CurrentTimeInLondon + &quot; and it is still night time in London&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MessageBox>
               </If.Then>
               <If.Else>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;It is morning time in London&quot;]" />
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The current time in London is &quot; + CurrentTimeInLondon +&quot; and it is morning time in London&quot;]" />
               </If.Else>
             </If>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="713,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The current time in London is &quot; + CurrentTimeInLondon]" />
