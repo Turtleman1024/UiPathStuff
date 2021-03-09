@@ -67,13 +67,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Open the chrome browser and goes to www.google.com&#xA;" BrowserType="Chrome" DisplayName="Open Browser Https://www.google.com" sap:VirtualizedContainerService.HintSize="789,1163" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.google.com">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Open the chrome browser and goes to www.google.com&#xA;" BrowserType="Chrome" DisplayName="Open Browser Https://www.google.com" sap:VirtualizedContainerService.HintSize="789,1064" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.google.com">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,1020" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,921" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CurrentTimeInLondon" />
             </Sequence.Variables>
@@ -158,7 +158,6 @@
                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;The current time in London is &quot; + CurrentTimeInLondon +&quot; and it is morning time in London&quot;]" />
               </If.Else>
             </If>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="713,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The current time in London is &quot; + CurrentTimeInLondon]" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
